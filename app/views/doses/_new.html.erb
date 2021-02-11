@@ -1,0 +1,5 @@
+<%= simple_form_for [ cocktail, dose ] do |f| %>
+  <%= f.association :ingredient, as: :radio_buttons %>
+  <%= f.input :description, placeholder: "how much ?" %>
+  <%= f.submit %>
+<% end %>
