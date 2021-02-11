@@ -2,3 +2,10 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.cocktail-card {
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+}

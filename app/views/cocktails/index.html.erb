@@ -1,15 +1,19 @@
-<h1>All Cocktails</h1>
+<div class="container">
+  <h1>All Cocktails</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail_path(cocktail) do %>
-        <img src=<%= cocktail.image_url %> alt=<%= cocktail.name %>>
-        <%= cocktail.name %>
+  <div class="cocktail-card">
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+        <li>
+          <%= link_to cocktail_path(cocktail) do %>
+            <img src=<%= cocktail.image_url %> alt=<%= cocktail.name %>>
+            <%= cocktail.name %>
+          <% end %>
+          <%= link_to "Edit cocktail", edit_cocktail_path(cocktail) %>
+        </li>
       <% end %>
-      <%= link_to "Edit cocktail", edit_cocktail_path(cocktail) %>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "Create a new cocktail", new_cocktail_path %>
+    </ul>
+  </div>
+  
+  <%= link_to "Create a new cocktail", new_cocktail_path %>
+</div>
