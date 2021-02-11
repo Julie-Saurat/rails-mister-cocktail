@@ -1,0 +1,7 @@
+<h1>New coktail</h1>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name, placeholder: "new cocktail name" %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to cocktails", cocktails_path %>
