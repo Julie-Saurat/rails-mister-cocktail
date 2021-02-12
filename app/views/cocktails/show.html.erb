@@ -1,22 +1,49 @@
-<h1><%= @cocktail.name %></h1>
-<% if @cocktail.photo.attached? %>
-  <%= cl_image_tag @cocktail.photo.key, width: 300, height: 300, crop: :fill %>
-<% end %>
-
-
-<h2>Ingredients:</h2>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <p>
-      <%= dose.ingredient.name %>
-      - <%= dose.description %> 
-      - <%= dose.id %> 
-      - <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-    </p>
+<div class="container">
+  <% if @cocktail.photo.attached? %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, width: 300, height: 400, crop: :fill %>')">
+      <%= @cocktail.name %>
+    </div>
+  <% else %>
+    <h1><%= @cocktail.name %></h1>
   <% end %>
-</ul>
 
-<h2>Add ingredient:</h2>
-<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
 
-<%= link_to "Back to cocktails", cocktails_path %>
+  <div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card ingredients-info">
+    <div class="card-header">
+      <h4>Ingredients</h4>
+    </div>
+    <div class="card-body">
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <p class="card-text">
+            <i class="far fa-circle"></i>
+            <%= dose.ingredient.name %>
+            - <%= dose.description %> 
+            - <%= dose.id %> 
+            - <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+          </p>
+        <% end %>
+      </ul>
+    </div>
+
+    <h2>Add ingredient:</h2>
+    <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+  </div>
+
+  <div class="cocktail-description">
+  </div>
+
+
+  <%= link_to "Back to cocktails", cocktails_path %>
+</div>

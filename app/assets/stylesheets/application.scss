@@ -10,8 +10,11 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/show";
 @import "pages/index";
 @import 'select2/dist/css/select2';
+
+$secondary: #182121;
 
 body {
   background-color: #121c1ceb;;
