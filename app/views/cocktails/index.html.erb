@@ -3,7 +3,7 @@
 
   <div class="cocktail-card">
     <ul>
-      <% @cocktails.sortable
+      <% @cocktails.sort
                    .each do |cocktail| %>
         <li>
           <%= link_to cocktail_path(cocktail) do %>
