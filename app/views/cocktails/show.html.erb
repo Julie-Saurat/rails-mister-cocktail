@@ -1,5 +1,7 @@
 <h1><%= @cocktail.name %></h1>
-<%# <img src=<%= @cocktail.image_url %> alt="cocktail image"> %>
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, width: 300, height: 300, crop: :fill %>
+<% end %>
 
 
 <h2>Ingredients:</h2>

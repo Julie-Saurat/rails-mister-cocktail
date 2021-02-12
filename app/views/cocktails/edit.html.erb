@@ -1,7 +1,8 @@
 <h1>Edit coktail</h1>
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, placeholder: "new cocktail name" %>
-  <%# <%= f.input :image_url, placeholder: "add an image url" %> %>
+  <%# <%= f.input :image_url, placeholder: "add an image url" %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 

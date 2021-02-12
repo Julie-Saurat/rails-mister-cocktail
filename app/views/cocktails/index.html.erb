@@ -3,11 +3,15 @@
 
   <div class="cocktail-card">
     <ul>
-      <% @cocktails.each do |cocktail| %>
+      <% @cocktails.sortable
+                   .each do |cocktail| %>
         <li>
           <%= link_to cocktail_path(cocktail) do %>
-            <%# <img src=<%= cocktail.image_url %> alt=<%= cocktail.name %>> %>
+            <%# <img src=<%= cocktail.image_url %>
             <%= cocktail.name %>
+          <% end %>
+          <% if cocktail.photo.attached? %>
+            <%= cl_image_tag cocktail.photo.key, width: 150, height: 150, crop: :thumb %>
           <% end %>
           <%= link_to "Edit cocktail", edit_cocktail_path(cocktail) %>
         </li>
