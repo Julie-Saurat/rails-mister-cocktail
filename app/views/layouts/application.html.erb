@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>RailsMisterCocktail</title>
+    <title>Mixthology</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,16 +12,7 @@
   </head>
 
   <body>    
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <%= link_to cocktails_path do %>
-            <%= image_tag "jigger.png", alt: "Logo Mixthology", width: 100 %>
-          <%# <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"> %>
-          <% end %>
-        </a>
-      </div>
-    </nav>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>
