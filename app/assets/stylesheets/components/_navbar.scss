@@ -19,16 +19,19 @@
 #nav-container {
   margin-right: 5vw;
   margin-left: 5vw;
-  #nav-tohome{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    img{
-      padding-right: 2vw;
-    }
-    h1{
-      margin: 0;
-    }
-  }
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // #nav-tohome{
+  //   display: flex;
+  //   justify-content: start;
+  //   align-items: center;
+  //   img{
+  //     padding-right: 2vw;
+  //   }
+  //   h1{
+  //     margin: 0;
+  //   }
+  // }
 }
-

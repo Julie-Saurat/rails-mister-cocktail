@@ -1,12 +1,14 @@
 <nav class="navbar bg-light">
   <div id="nav-container">
     <%= link_to cocktails_path do %>
-      <div id="nav-tohome">
+      <%# <div id="nav-tohome"> %>
         <%= image_tag "jigger.png", alt: "Logo Mixthology", width: 100 %>
-        <h1>Mixthology</h1>
-      </div>
+      <%# </div> %>
     <% end %>
-    <div id="user">
+    <%= link_to cocktails_path do %>
+        <h1>Mixthology</h1>
+    <% end %>
+    <%# <div id="user"> %>
       <% if user_signed_in?%>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,7 +24,7 @@
             <i class="fas fa-sign-in-alt"></i>
         <% end %>
       <% end %>
-    </div>
+    <%# </div> %>
   </div>
 </nav>
 
