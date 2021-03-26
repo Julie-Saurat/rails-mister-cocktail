@@ -1,28 +1,26 @@
-<nav class="navbar bg-light">
+<nav class="navbar nav-blured">
   <div id="nav-container">
     <%= link_to cocktails_path do %>
-      <div id="nav-tohome">
         <%= image_tag "jigger.png", alt: "Logo Mixthology", width: 100 %>
-        <h1>Mixthology</h1>
-      </div>
     <% end %>
-    <div id="user">
-      <% if user_signed_in?%>
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-user"></i>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><%= link_to "Profile",  edit_user_registration_path, class: "dropdown-item" %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %></i></a></li>
-          </ul>
-        </div>
-      <% else %>
-        <%= link_to new_user_session_path do %>
-            <i class="fas fa-sign-in-alt"></i>
-        <% end %>
+    <%= link_to cocktails_path do %>
+        <h2>Mixthology</h2>
+    <% end %>
+    <% if user_signed_in?%>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><%= link_to "Profile",  edit_user_registration_path, class: "dropdown-item" %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %></i></a></li>
+        </ul>
+      </div>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+          <i class="fas fa-sign-in-alt"></i>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </nav>
 
