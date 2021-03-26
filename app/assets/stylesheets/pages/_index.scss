@@ -2,10 +2,26 @@
 @import "components/card";
 
 .index-container{
-  margin-top: 1vh;
+  margin: 1vh 4vw 0 4vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(40vh, auto);
   column-gap: 1vw;
   row-gap: 1vh;
+}
+
+.card-plus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-plus:hover{
+  background-color: $success;
+  border-radius: 6% 1%;
+  i{
+    font-size: 12vh;
+    font-weight: bold;
+    color: $light-gray;
+  }
 }

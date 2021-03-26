@@ -1,0 +1,17 @@
+.footer-container{
+  background-color: rgba(255, 255, 255, 0.05);
+  position: fixed;
+  width: 100%;
+  height: 4vh;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i{
+    font-size: 2vh;
+    color: #ff9194b5;
+  }
+  h5{
+    color: $gray;
+  }
+}

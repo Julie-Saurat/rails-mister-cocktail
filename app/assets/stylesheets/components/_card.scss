@@ -4,13 +4,18 @@
   flex-direction: column;
   align-items: center;
   h3{
-    padding: 2vh;
+    padding: 1vh;
     margin: 0;
   }
   .card-image{
     border-radius: 6% 1%;
     object-fit: fill;
-    width: 50vh;
+    width: 45vh;
     height: 25vh;
   }
+}
+
+.card-container:hover{
+  background-color: #ff919557;
+  border-radius: 6% 1%;
 }

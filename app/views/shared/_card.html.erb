@@ -1,4 +1,5 @@
-<div class="card-container">
+<div class="card-container" data-aos="zoom-out">
+
   <%= link_to cocktail_path(cocktail) do %>
     <h3><%= cocktail.name %></h3>
   <% end %>
@@ -8,7 +9,6 @@
       <%= cl_image_tag cocktail.photo.key, crop: :thumb, class: "card-image" %>
     <% end %>
   <% end %>
-
 
 </div>
 
