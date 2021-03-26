@@ -1,10 +1,11 @@
 // Import page-specific CSS files here.
-// @import "home";
+@import "components/card";
 
-
-.cocktail-card {
-  ul{
-    list-style-type: none;
-    padding: 0;
-  }
+.index-container{
+  margin-top: 1vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(40vh, auto);
+  column-gap: 1vw;
+  row-gap: 1vh;
 }

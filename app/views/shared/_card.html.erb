@@ -1,0 +1,28 @@
+<div class="card-container">
+  <%= link_to cocktail_path(cocktail) do %>
+    <h3><%= cocktail.name %></h3>
+  <% end %>
+
+  <%= link_to cocktail_path(cocktail) do %>
+    <% if cocktail.photo.attached? %>
+      <%= cl_image_tag cocktail.photo.key, crop: :thumb, class: "card-image" %>
+    <% end %>
+  <% end %>
+
+
+</div>
+
+
+<%# 
+<li>
+        <%= link_to cocktail_path(cocktail) do %>
+          <%# <img src=<%= cocktail.image_url %>
+          <%# <%= cocktail.name %>
+        <%# <% end %>
+        <%# <%= link_to cocktail_path(cocktail) do %>
+          <%# <% if cocktail.photo.attached? %>
+            <%# <%= cl_image_tag cocktail.photo.key, width: 150, height: 150, crop: :thumb %>
+          <%# <% end %>
+        <%# <% end %>
+        <%# <%= link_to "Edit cocktail", edit_cocktail_path(cocktail) %>
+      <%# </li> %>
