@@ -1,10 +1,10 @@
-<nav class="navbar bg-light">
+<nav class="navbar nav-blured">
   <div id="nav-container">
     <%= link_to cocktails_path do %>
         <%= image_tag "jigger.png", alt: "Logo Mixthology", width: 100 %>
     <% end %>
     <%= link_to cocktails_path do %>
-        <h1>Mixthology</h1>
+        <h2>Mixthology</h2>
     <% end %>
     <% if user_signed_in?%>
       <div class="nav-item dropdown">

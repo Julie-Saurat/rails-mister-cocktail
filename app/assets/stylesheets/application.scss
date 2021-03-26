@@ -9,22 +9,61 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
-@import "components/show";
 @import "pages/index";
+@import "pages/show";
+
 @import 'select2/dist/css/select2';
+@import "components/navbar";
+
 
 $secondary: #182121;
 
 body {
-  background-color: #121c1ceb;;
+  background-color: #000000eb;;
   color: white;
 }
 
 a{
   text-decoration: none;
+  color: $light-gray;
 }
 
 a:hover{
   text-decoration: none;
+  color: $primary;
+}
+
+h1, h2, h3, h4{
+  font-weight: bold;
+  color: $light-gray;
+}
+
+h1, h2, h3{
+  font-family: $headers-font;
+}
+
+h4, p{
+  font-family: $body-font;
+}
+
+h1{
+  font-size: 64px;
+}
+
+h2{
+  font-size: 36px;
+}
+
+h3{
+  font-size: 48px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+p{
+  font-size: 24px;
+  font-weight: normal;
+  color: $light-gray;
 }

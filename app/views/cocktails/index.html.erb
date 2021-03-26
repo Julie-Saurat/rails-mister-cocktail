@@ -1,5 +1,18 @@
-<div class="container">
-  <h1>All Cocktails</h1>
+<div class="index-container">
+<%# add a search bar %>
+
+
+  <div class="cocktail-card">
+    <% @cocktails.sort
+                 .each do |cocktail| %>
+      <%= render 'shared/card', cocktail: cocktail %>
+    <% end %>
+  </div>
+
+      
+
+
+
 
   <div class="cocktail-card">
     <ul>

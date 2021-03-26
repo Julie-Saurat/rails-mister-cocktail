@@ -1,19 +1,8 @@
-// .navbar {
-//   justify-content: space-between;
-//   background: white;
-// }
+@import "components/avatar";
 
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
-
-.bg-light {
-  background-color: #141e1ebf !important;
+.nav-blured {
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #nav-container {
@@ -23,4 +12,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  i{
+    font-size: 4vh;
+    font-weight: bold;
+    color: $light-gray;
+  }
 }
