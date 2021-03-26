@@ -1,38 +1,15 @@
 <div class="index-container">
 <%# add a search bar %>
 
-
-  <div class="cocktail-card">
-    <% @cocktails.sort
-                 .each do |cocktail| %>
-      <%= render 'shared/card', cocktail: cocktail %>
+  <% @cocktails.sort
+                .each do |cocktail| %>
+    <%= render 'shared/card', cocktail: cocktail %>
+  <% end %>
+  
+  <div class= "card-container card-plus" data-aos="zoom-out">
+    <%= link_to new_cocktail_path do %>
+      <i class="fas fa-plus"></i>
     <% end %>
   </div>
 
-      
-
-
-
-
-  <div class="cocktail-card">
-    <ul>
-      <% @cocktails.sort
-                   .each do |cocktail| %>
-        <li>
-          <%= link_to cocktail_path(cocktail) do %>
-            <%# <img src=<%= cocktail.image_url %>
-            <%= cocktail.name %>
-          <% end %>
-          <%= link_to cocktail_path(cocktail) do %>
-            <% if cocktail.photo.attached? %>
-              <%= cl_image_tag cocktail.photo.key, width: 150, height: 150, crop: :thumb %>
-            <% end %>
-          <% end %>
-          <%= link_to "Edit cocktail", edit_cocktail_path(cocktail) %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-  
-  <%= link_to "Create a new cocktail", new_cocktail_path %>
 </div>

@@ -14,12 +14,12 @@
 
 @import 'select2/dist/css/select2';
 @import "components/navbar";
+@import "components/footer";
 
 
-$secondary: #182121;
 
 body {
-  background-color: #000000eb;;
+  background-color: black;
   color: white;
 }
 
@@ -51,19 +51,29 @@ h1{
 }
 
 h2{
-  font-size: 36px;
+  font-size: 48px;
 }
 
 h3{
-  font-size: 48px;
+  font-size: 36px;
 }
 
 h4{
   font-size: 24px;
 }
 
+h5{
+  font-size: 14px;
+}
+
 p{
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
+  color: $light-gray;
+}
+
+i{
+  font-size: 7vh;
+  font-weight: bold;
   color: $light-gray;
 }

@@ -1,13 +1,13 @@
 @import "components/avatar";
 
 .nav-blured {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #nav-container {
-  margin-right: 5vw;
-  margin-left: 5vw;
+  margin-right: 4vw;
+  margin-left: 4vw;
   width: 100vw;
   display: flex;
   justify-content: space-between;
