@@ -9,6 +9,7 @@
   margin-right: 4vw;
   margin-left: 4vw;
   width: 100vw;
+  height: 7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,4 +18,11 @@
     font-weight: bold;
     color: $light-gray;
   }
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }

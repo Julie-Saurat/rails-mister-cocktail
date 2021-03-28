@@ -77,3 +77,8 @@ i{
   font-weight: bold;
   color: $light-gray;
 }
+
+.body_container{
+  min-height: calc(100vh - 4vh);
+  margin: 0;
+}
