@@ -1,37 +1,75 @@
-<div class="container">
-  <% if @cocktail.photo.attached? %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, width: 300, height: 400, crop: :fill %>')">
-      <%= @cocktail.name %>
+<div class="show-container">
+  <div class="cocktail-image">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, class: "cocktail-picture"  %>
+    <% else %>
+      <div class="no-picture">
+        <h4>Ce cocktail semble avoir déjà été bu ;)</h4>
+      </div>
+    <% end %>
+  </div>
+  <div class="cocktail-infos">
+    <div id="signed">
+      <% if user_signed_in? %>
+        <%= link_to cocktail_path(@cocktail), method: :delete do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+        <%= link_to edit_cocktail_path(@cocktail) do %>
+          <i class="fas fa-pen"></i>
+        <% end %>
+      <% end %>
     </div>
-  <% else %>
-    <h1><%= @cocktail.name %></h1>
-  <% end %>
+    <h1><%= @cocktail.name.capitalize%></h1>
+    <div class="recipe">
+      <h4>La Recette</h4>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <p class="card-text">
+            <%= dose.description %> - <%= dose.ingredient.name %>
+          </p>
+        <% end %>
+      </ul>
+    </div>
+    <div class= "font-plus" data-aos="zoom-out">
+      <%= link_to new_cocktail_path do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-  <div class="card ingredients-info">
+
+
+
+    <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, width: 300, height: 400, crop: :fill')"> %>
+      <%# <%= @cocktail.name %>
+    <%# </div>
+  <% else %>
+    <%# <h1><%= @cocktail.name</h1> %>
+  <%# <% end %>
+  <%# <div class="card ingredients-info">
     <div class="card-header">
       <h4>Ingredients</h4>
     </div>
     <div class="card-body">
       <ul>
         <% @cocktail.doses.each do |dose| %>
-          <p class="card-text">
+          <%# <p class="card-text">
             <i class="far fa-circle"></i>
             <%= dose.ingredient.name %>
-            - <%= dose.description %> 
-            - <%= dose.id %> 
-            - <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-          </p>
+            <%# - <%= dose.description %> 
+            <%# - <%= dose.id %> 
+            <%# - <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+          <%# </p>
         <% end %>
-      </ul>
-    </div>
-
-    <h2>Add ingredient:</h2>
+      <%# </ul>
+    </div> %>
+    <%# <h2>Add ingredient:</h2>
     <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-  </div>
+  <%# </div>
 
   <div class="cocktail-description">
   </div>
 
 
   <%= link_to "Back to cocktails", cocktails_path %>
-</div>
