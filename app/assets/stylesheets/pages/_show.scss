@@ -66,3 +66,61 @@
     color: $success;
   }
 }
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  min-height: calc(100vh - 13vh);
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(255, 253, 253, 0.25); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  border-radius: 6% 1%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; 
+  color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3{
+    margin: 2vh 0;
+  }
+  .ing-form{
+    margin: 2vh 0;
+    width: 100%;
+    #ing-elements{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .dose_ingredient{
+        width: 20%;
+      }
+    }
+  }
+}
+
+.font-ing{
+  margin: 2vh 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.font-ing .fa-check:hover{
+  color: $success;
+}
