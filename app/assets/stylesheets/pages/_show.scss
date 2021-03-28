@@ -23,10 +23,13 @@
     }
   }
   .cocktail-infos{
-    background-color: rgb(234, 0, 255);
     padding: 4vw;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-around;
     .signed{
       display: flex;
       align-items: center;
@@ -35,44 +38,31 @@
         font-size: 36px;
       }
     }
-
+    .recipe{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 4vh 0;
+      height: 100%;
+      width: 100%;
+      p{
+        margin: 0;
+      }
+    }
   }
-
-  
 }
 
 .font-plus{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 10vh;
 }
 
 .font-plus:hover{
   i{
-    font-size: 12vh;
     font-weight: bold;
     color: $success;
   }
 }
-
-
-
-.card-category {
-  // background-size: cover;
-  // background-position: center;
-  // height: 370px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // color: white;
-  // font-size: 50px;
-  // font-weight: bold;
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  // border-radius: 5px;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // margin: 25px 0;
-}
-
-// .ingredients-info {
-//   color: $secondary;
-// }

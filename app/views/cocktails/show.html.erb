@@ -22,16 +22,14 @@
     <h1><%= @cocktail.name.capitalize%></h1>
     <div class="recipe">
       <h4>La Recette</h4>
-      <ul>
-        <% @cocktail.doses.each do |dose| %>
-          <p class="card-text">
-            <%= dose.description %> - <%= dose.ingredient.name %>
-          </p>
-        <% end %>
-      </ul>
+      <% @cocktail.doses.each do |dose| %>
+        <p class="card-text">
+          <%= dose.description %> - <%= dose.ingredient.name %>
+        </p>
+      <% end %>
     </div>
     <div class= "font-plus" data-aos="zoom-out">
-      <%= link_to new_cocktail_path do %>
+      <%= link_to new_cocktail_dose_path(@cocktail) do %>
         <i class="fas fa-plus"></i>
       <% end %>
     </div>
