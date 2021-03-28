@@ -1,5 +1,5 @@
 <div class="show-container">
-  <div class="cocktail-image">
+  <div class="cocktail-image" data-aos="fade-right">
     <% if @cocktail.photo.attached? %>
       <%= cl_image_tag @cocktail.photo.key, class: "cocktail-picture"  %>
     <% else %>
